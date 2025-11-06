@@ -5,9 +5,8 @@ import DailyReport from "../../components/reports/DailyReport";
 import MonthlyReport from "../../components/reports/MonthlyReport";
 import YearlyReport from "../../components/reports/YearlyReport";
 import Button from "../../components/ui/Button";
-import {
-  getTodaysDate,
-} from "../../constants/DateConstants";
+import { getTodaysDate } from "../../constants/DateConstants";
+import NewLogBtn from "../../components/layouts/NewLogBtn";
 
 export default function Reports() {
   const DatePickerModes = ["day", "month", "year"] as const;
@@ -62,6 +61,8 @@ export default function Reports() {
               />
             </div>
           )}
+
+          <NewLogBtn />
         </div>
       </div>
       <div className="max-w-6xl mx-auto">

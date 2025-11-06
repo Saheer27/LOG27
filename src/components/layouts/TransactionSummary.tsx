@@ -38,6 +38,7 @@ const TransactionSummary: React.FC<TransactionSummaryType> = ({
       <h2 className="text-2xl font-bold text-center mb-6 text-indigo-700">
         Transaction Summary
       </h2>
+
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 px-2">
         {items.map((item, index) => {
           const isCurrency = item.title !== "Transactions";
@@ -48,15 +49,19 @@ const TransactionSummary: React.FC<TransactionSummaryType> = ({
                   : "₹" + item.value.toLocaleString("en-IN")
               }`
             : item.value;
+
           return (
             <div
               key={index}
-              className="bg-white shadow-lg rounded-2xl py-6 px-4 flex flex-col justify-center items-center text-center hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
+              className="bg-white shadow-lg rounded-2xl py-6 px-4 flex flex-col justify-center items-center text-center hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 w-full"
             >
               <h3 className="text-gray-500 text-sm sm:text-base font-medium uppercase tracking-wide mb-1">
                 {item.title}
               </h3>
-              <p className={`text-xl sm:text-2xl font-bold ${item.color}`}>
+
+              <p
+                className={`text-xl sm:text-2xl font-bold ${item.color} text-center break-all leading-tight w-full`}
+              >
                 {valueDisplay}
               </p>
             </div>

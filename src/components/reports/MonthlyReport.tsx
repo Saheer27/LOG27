@@ -131,7 +131,7 @@ const MonthlyReport: React.FC<MonthlyReportType> = ({
                           </td>
                           <td className="py-3 px-5 text-right">
                             <Button
-                              className="bg-indigo-500 hover:bg-indigo-600 transition-all text-white px-3 py-1.5 rounded-lg text-sm shadow-sm"
+                              className="bg-indigo-500 hover:bg-indigo-600 whitespace-nowrap transition-all text-white px-3 py-1.5 rounded-lg text-sm shadow-sm"
                               name="viewMonthlyReport"
                               onClick={() => setSelectedMonth(item.month)}
                             >

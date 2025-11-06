@@ -38,6 +38,7 @@ export default function NewLogs() {
       id: "amount",
       name: "amount",
       placeholder: "Amount",
+      max: "10000000",
     },
     {
       name: "logType",
@@ -102,6 +103,8 @@ export default function NewLogs() {
         newErrors[field.name] = `${field.labelName} is required`;
       } else if (field.name === "amount" && Number(value) <= 0) {
         newErrors[field.name] = `${field.labelName} must be greater than zero`;
+      } else if (field.name === "amount" && Number(value) > 10000000) {
+        newErrors[field.name] = `${field.labelName} cannot exceed ₹1,00,00,000`;
       }
     });
     setErrors(newErrors);

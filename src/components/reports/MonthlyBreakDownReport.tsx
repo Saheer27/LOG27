@@ -78,7 +78,7 @@ const MonthlyBreakDownReport: React.FC<BreakDownReportType> = ({
                       <td className="py-3 px-5 whitespace-nowrap">
                         {item.date.split("-").reverse().join("-")} {item.time}
                       </td>
-                      <td className="py-3 px-5">
+                      <td className="py-3 px-5 whitespace-nowrap">
                         {categoryLookup[item.category] || item.category}
                       </td>
                       <td className="py-3 px-5 truncate max-w-[180px] md:max-w-[350px] text-gray-600">
@@ -88,12 +88,12 @@ const MonthlyBreakDownReport: React.FC<BreakDownReportType> = ({
                           </span>
                         )}
                       </td>
-                      <td className="py-3 px-5">
+                      <td className="py-3 px-5 whitespace-nowrap">
                         {paymentMethodLookup[item.paymentMethod] ||
                           item.paymentMethod}
                       </td>
                       <td
-                        className={`py-3 px-5 font-medium ${
+                        className={`py-3 px-5 font-semibold whitespace-nowrap ${
                           item.logType === "Expense"
                             ? "text-red-500"
                             : "text-green-600"
