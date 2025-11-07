@@ -33,9 +33,9 @@ export default function Header() {
   return (
     <header className="bg-indigo-500 text-white sticky top-0 z-50 shadow">
       <div className="max-w-7xl mx-auto flex items-center justify-between p-4">
-        <h1 className="text-xl sm:text-2xl font-bold">
+        <Link href="/dashboard" className="text-xl sm:text-2xl font-bold">
           LOG27
-        </h1>
+        </Link>
 
         <nav className="hidden md:flex gap-6 items-center">
           {links.map((link) => (
